@@ -28,3 +28,14 @@ gunakan open api 3 file ext json (gunakan OpenAPI (Swagger) Editor ext di vs cod
      * buat file dengan nama category_repository.go
 - membuat implementation dari category_repository.go
      * buat filel dengan nama category_repository_implementation.go
+- Membuat service, category service => handle bisnis logicnya
+     * buat folder service, kemudian buat file category_service.go dalam folder service
+- Membuat model untuk representasi response dan request dari service yang telah dibuat
+     * buat folder web, kemudian buat beberapa file diantaranya:
+       + category_create_request.go
+       + category_update_request.go
+       + category_response.go
+- membuat implementation dari category_service.go
+     * buat file didalam folder service dengan nama category_service_implementation.go
+- Membuat validasi dari setiap struct
+- Membuat controller & controller implementation
