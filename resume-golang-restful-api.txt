@@ -1,41 +1,11 @@
-*Restful api dengan go
-
-- go mod init
-
-- tambahkan dependency
-Driver MySQL : https://github.com/go-sql-driver/mysql  => go get -u github.com/go-sql-driver/mysql
-HTTP Router : https://github.com/julienschmidt/httprouter => go get github.com/go-sql-driver/mysql
-Validation : https://github.com/go-playground/validator => go get github.com/go-playground/validator/v10
-
-
-- buat open api
-gunakan open api 3 file ext json (gunakan OpenAPI (Swagger) Editor ext di vs code)
- * api spec list category
- * api spec create category
- * api spec get category
- * api spec update category
- * api spec delete category 
- * api spec security
-
-- Buat database dan table berdasarkan open api yang telah dibuat
-
-- membuat data model disini disebut domain/entity
- * buat folder model
-   * buat folder domain dalam folder model 
-     * buat model dengan nama category.go
-- membuat data akses layer repository, category repository => data akses layer ke domain category
-     * buat folder repository dalam root foolder
-     * buat file dengan nama category_repository.go
-- membuat implementation dari category_repository.go
-     * buat filel dengan nama category_repository_implementation.go
-- Membuat service, category service => handle bisnis logicnya
-     * buat folder service, kemudian buat file category_service.go dalam folder service
-- Membuat model untuk representasi response dan request dari service yang telah dibuat
-     * buat folder web, kemudian buat beberapa file diantaranya:
-       + category_create_request.go
-       + category_update_request.go
-       + category_response.go
-- membuat implementation dari category_service.go
-     * buat file didalam folder service dengan nama category_service_implementation.go
-- Membuat validasi dari setiap struct
-- Membuat controller & controller implementation
+1. main => env, connect db
+2. database => migration
+3. entity/struct/domain => initiate data/properti yang digunakan untuk request dan response
+4. repository => komunikasi dengan database (insert, update, delete, select) dan domain/struct/entity yang telah dibuat
+5. service => untuk mengatur bisnis logic 
+- validation jika ada
+6. controller => untuk membuat fungsi yang akan digunakan oleh setiap API yang terbentuk
+7. router => manajemen endpoint
+----------------------------------------------------------------------
+helper => coding yang berulang bisa disimpan disini
+middleware => 3rd party
